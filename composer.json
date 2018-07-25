@@ -1,0 +1,20 @@
+{
+    "name": "jormaechea/php-tic-tac-toe",
+    "description": "A Tic Tac Toe AI that never looses",
+    "authors": [
+        {
+            "name": "Joaquín Ormaechea",
+            "email": "joaquinormaechea@gmail.com"
+        }
+    ],
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "PhpTicTacToe\\Test\\": "tests/",
+            "PhpTicTacToe\\": "src/"
+        }
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^5.7"
+    }
+}
