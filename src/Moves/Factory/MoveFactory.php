@@ -1,6 +1,6 @@
 <?php
 
-namespace PhpTicTacToe\Moves;
+namespace PhpTicTacToe\Moves\Factory;
 
 class MoveFactory {
 

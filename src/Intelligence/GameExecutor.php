@@ -3,7 +3,7 @@
 namespace PhpTicTacToe\Intelligence;
 
 use \PhpTicTacToe\Board\Board;
-use \PhpTicTacToe\Moves\MoveFactory;
+use \PhpTicTacToe\Moves\Factory\MoveFactory;
 use \PhpTicTacToe\Exceptions\GameException;
 
 class GameExecutor {
