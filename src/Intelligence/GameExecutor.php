@@ -12,10 +12,14 @@ class GameExecutor {
 
 	private $moves;
 
-	public function __construct(Board $board) {
+	public function __construct(Board $board, MoveFactory $moveFactory = null) {
+
+		if(empty($moveFactory)) {
+			$moveFactory = new MoveFactory();
+		}
 
 		$this->board = $board;
-		$this->moves = MoveFactory::getAllMovesByPriority();
+		$this->moves = $moveFactory->getAllMovesByPriority();
 	}
 
 	public function play() {

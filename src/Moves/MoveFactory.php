@@ -4,7 +4,7 @@ namespace PhpTicTacToe\Moves;
 
 class MoveFactory {
 
-	public static function getAllMovesByPriority() {
+	public function getAllMovesByPriority() {
 
 		return [
 			Win::class,
