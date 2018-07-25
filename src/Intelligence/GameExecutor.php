@@ -14,9 +14,7 @@ class GameExecutor {
 
 	public function __construct(Board $board, MoveFactory $moveFactory = null) {
 
-		if(empty($moveFactory)) {
-			$moveFactory = new MoveFactory();
-		}
+		$moveFactory = !empty($moveFactory) ? $moveFactory : new MoveFactory();
 
 		$this->board = $board;
 		$this->moves = $moveFactory->getAllMovesByPriority();
@@ -24,9 +22,7 @@ class GameExecutor {
 
 	public function play() {
 
-		foreach($this->moves as $moveName) {
-
-			$move = new $moveName();
+		foreach($this->moves as $move) {
 
 			if($move->isPossible($this->board)) {
 				return $move->perform($this->board);

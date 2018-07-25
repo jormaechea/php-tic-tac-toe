@@ -7,14 +7,14 @@ class MoveFactory {
 	public function getAllMovesByPriority() {
 
 		return [
-			\PhpTicTacToe\Moves\Win::class,
-			\PhpTicTacToe\Moves\Block::class,
-			\PhpTicTacToe\Moves\Fork::class,
-			\PhpTicTacToe\Moves\BlockFork::class,
-			\PhpTicTacToe\Moves\Center::class,
-			\PhpTicTacToe\Moves\OppositeCorner::class,
-			\PhpTicTacToe\Moves\EmptyCorner::class,
-			\PhpTicTacToe\Moves\EmptySide::class
+			new \PhpTicTacToe\Moves\Win(),
+			new \PhpTicTacToe\Moves\Block(),
+			new \PhpTicTacToe\Moves\Fork(),
+			new \PhpTicTacToe\Moves\BlockFork(),
+			new \PhpTicTacToe\Moves\Center(),
+			new \PhpTicTacToe\Moves\OppositeCorner(),
+			new \PhpTicTacToe\Moves\EmptyCorner(),
+			new \PhpTicTacToe\Moves\EmptySide()
 		];
 	}
 
